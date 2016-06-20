@@ -1,0 +1,56 @@
+ul, ol {
+  margin-left:35px;
+}
+#header h1, header h1 {
+  padding:0;
+  line-height:0;
+}
+.content {
+  margin-bottom:25px;
+  padding:15px 0 30px 0;
+  background-color:#eee;
+  background-color: #fff;
+  border-radius: 4px ;
+  -webkit-border-radius: 4px ;
+  -moz-border-radius: 4px ;
+  color:#333;
+}
+
+.post-admin-controls { 
+  float:right; 
+  padding: 0px 25px 5px 0px;
+}
+.post-date{
+    font-weight:bold;
+}
+.post-title a{
+    font-size:1.2em;
+    font-weight:bold;
+    text-decoration:none;
+    display:block;
+}
+.post-content {
+  border-top:solid thin #ccc;
+  padding:10px 0 0 0;
+}
+
+.post-form form {
+  
+}
+    .post-form input.text-box,  .post-form textarea {
+      width:98%;
+      padding:4px;
+      border:solid thin #333;
+      border-radius: 4px ;
+      -webkit-border-radius: 4px ;
+      -moz-border-radius: 4px ;
+    }
+      .post-form input.text-box:focus,  .post-form textarea:focus {
+        background-color:lightblue;
+      }
+    .post-form input.text-box{
+      font-weight:bold;
+    }
+    .post-form textarea {
+      min-height:300px;
+    }
