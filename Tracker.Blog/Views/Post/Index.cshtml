@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Tracker.Blog.Models.Post>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@foreach (var item in Model) {
+    @Html.Partial("_details", item)
+}
+

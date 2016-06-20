@@ -1,0 +1,47 @@
+﻿@model Tracker.Blog.Models.Post
+@{
+    ViewBag.Title = Model.Title;
+}
+
+@Html.Partial("_details", Model)
+<style type="text/css">
+    .recent {
+        background: gainsboro;
+        border: 1px solid #000;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+</style>
+
+<h1>Comments</h1>
+<div class="post-display content">
+    @{
+        int i = 0;
+        if (Model.Comments != null)
+        {
+            var firstOrDefault = Model.Comments.OrderByDescending(x => x.CreatedDate).FirstOrDefault();
+            if (firstOrDefault != null)
+            {
+                i = firstOrDefault.Id;
+            }
+        }
+
+    }
+
+    @foreach (var item in Model.Comments.OrderBy(x => x.CreatedDate))
+    {
+        //Check for Recent Comment posted by users
+        if (i == item.Id)
+        {
+            <div class="recent" title="Recently Posted">
+                @Html.Partial("_detailsComments", item)
+            </div>
+        }
+        else
+        {
+            @Html.Partial("_detailsComments", item)
+        }
+    }
+
+
+</div>

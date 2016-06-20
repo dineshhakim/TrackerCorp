@@ -1,0 +1,26 @@
+﻿@model Tracker.Blog.Models.Post
+<div class="post-display content">
+    <div class="post-admin-controls ">
+        @Html.ActionLink("Details", "Details", new { id = Model.Id }) |
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+    </div>
+    <div class="clear">
+    </div>
+    <div class="post-title grid_14">
+        <h3>
+            @Html.ActionLink(Model.Title, "Details", new { id = Model.Id })
+        </h3>
+    </div>
+    <div class="post-date grid_2">
+        @Model.CreatedOn.ToShortDateString()
+    </div>
+    <div class="clear">
+    </div>
+    <div class="post-content grid_16">
+        @Html.Raw(Model.BodyHtml())
+        @Html.ActionLink("Comment", "Create", "Comments", new { id = Model.Id }, null)
+    </div>
+    <div class="clear">
+    </div>
+</div>

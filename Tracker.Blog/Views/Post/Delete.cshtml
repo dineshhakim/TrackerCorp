@@ -1,0 +1,20 @@
+﻿@model Tracker.Blog.Models.Post
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="content">
+<div class="grid_8 prefix_4 suffix_4">
+
+
+<h3>Are you sure you want to delete the post "@Model.Title"?</h3>
+
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+</div>
+<div class="clear"></div>
+</div>

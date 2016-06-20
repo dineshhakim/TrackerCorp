@@ -1,0 +1,18 @@
+﻿@model Tracker.Blog.Models.Comment
+
+<div class="post-title grid_10">
+    <h3>
+        @Model.UserName
+    </h3>
+</div>
+<div class="post-date grid_4">
+    @Model.CreatedDate.ToString()
+</div>
+<div class="clear">
+</div>
+<div class="grid_16">
+  >  @Html.Raw(Model.Message)
+</div>
+<div class="clear"></div>
+<div class="post-content">
+</div>
